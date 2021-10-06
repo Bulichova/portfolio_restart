@@ -1,0 +1,29 @@
+.header {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.507);
+  width: 100%;
+  top: 20px;
+}
+.navList {
+  display: flex;
+  justify-content: space-evenly;
+  a {
+    color: white;
+    text-transform: capitalize;
+    display: block;
+    padding: 20px;
+    transition: all 1s ease;
+    &:hover,
+    &:focus {
+      color: rgb(201, 248, 73);
+    }
+    &::after {
+        content: "";
+        display: block;
+        width: inherit;
+        height: 2px;
+        background-color: rgb(201, 248, 73);
+        margin-top: 7px;
+    }
+  }
+}
