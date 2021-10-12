@@ -1,0 +1,61 @@
+// Создание кнопки гамбургер меню
+.menuBtn {
+  display: block;
+  background: red;
+  width: 50px;
+  height: 50px;
+}
+.menuBtn span,
+.menuBtn span::after,
+.menuBtn span::before {
+  display: block;
+  width: 30px;
+  height: 2px;
+  background: black;
+}
+.menuBtn span {
+  position: relative;
+}
+.menuBtn span::before,
+.menuBtn span::after {
+  content: '';
+  position: absolute;
+}
+.menuBtn span::before {
+  top: 4px;
+}
+.menuBtn span::after {
+  bottom: 4px;
+}
+
+// Изменяем положение палочек-меню при нажатии на CheckBox
+#menuToggle:checked ~ .menuBtn span {
+  transform: rotate(45deg);
+}
+#menuToggle:checked ~ .menuBtn span::before {
+  display: none;
+}
+#menuToggle:checked ~ .menuBtn span::after {
+  transform: rotate(90deg);
+  top: 0;
+}
+// Навигация в обычном состоянии-скрыта
+.menuBox {
+  display: block;
+  position: fixed;
+  top: 50px;
+  left: -100%;
+  width: 95%;
+  height: 100%;
+  background: rgb(68, 226, 165);
+  visibility: hidden;
+  transition: all 0.5s ease;
+}
+.menuBox ul {
+  height: inherit;
+  width: inherit;
+}
+// при нажатии на checkBox меню отображено
+#menuToggle:checked ~ .menuBox {
+  visibility: visible;
+}

@@ -331,4 +331,75 @@ summary {
   background-color: #c9f849;
   margin-top: 7px;
 }
+
+.menuBtn {
+  display: block;
+  background: red;
+  width: 50px;
+  height: 50px;
+}
+
+.menuBtn span,
+.menuBtn span::after,
+.menuBtn span::before {
+  display: block;
+  width: 30px;
+  height: 2px;
+  background: black;
+}
+
+.menuBtn span {
+  position: relative;
+}
+
+.menuBtn span::before,
+.menuBtn span::after {
+  content: '';
+  position: absolute;
+}
+
+.menuBtn span::before {
+  top: 4px;
+}
+
+.menuBtn span::after {
+  bottom: 4px;
+}
+
+#menuToggle:checked ~ .menuBtn span {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+#menuToggle:checked ~ .menuBtn span::before {
+  display: none;
+}
+
+#menuToggle:checked ~ .menuBtn span::after {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  top: 0;
+}
+
+.menuBox {
+  display: block;
+  position: fixed;
+  top: 50px;
+  left: -100%;
+  width: 95%;
+  height: 100%;
+  background: #44e2a5;
+  visibility: hidden;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.menuBox ul {
+  height: inherit;
+  width: inherit;
+}
+
+#menuToggle:checked ~ .menuBox {
+  visibility: visible;
+}
 /*# sourceMappingURL=main.css.map */
