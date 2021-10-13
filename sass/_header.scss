@@ -1,6 +1,6 @@
 .header {
   position: fixed;
-  background-color: rgba(0, 0, 0, 0.507);
+  background-color: $specialGrey;
   width: 100%;
   top: 20px;
 }
@@ -15,15 +15,24 @@
     transition: all 1s ease;
     &:hover,
     &:focus {
-      color: rgb(201, 248, 73);
+      color: $specialLime;
     }
     &::after {
-        content: "";
-        display: block;
-        width: inherit;
-        height: 2px;
-        background-color: rgb(201, 248, 73);
-        margin-top: 7px;
+      content: '';
+      display: block;
+      width: inherit;
+      height: 2px;
+      background-color: $specialLime;
+      margin-top: 7px;
     }
+  }
+}
+.nav {
+  display: none;
+}
+@media screen and (min-width: 644px) {
+  .nav {
+    display: flex;
+    justify-content: center;
   }
 }

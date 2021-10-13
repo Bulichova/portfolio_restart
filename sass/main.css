@@ -324,7 +324,7 @@ summary {
 }
 
 .navList a::after {
-  content: "";
+  content: '';
   display: block;
   width: inherit;
   height: 2px;
@@ -332,14 +332,38 @@ summary {
   margin-top: 7px;
 }
 
+.nav {
+  display: none;
+}
+
+@media screen and (min-width: 644px) {
+  .nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .menuBtn {
-  display: block;
-  background: red;
-  width: 50px;
-  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #c9f849;
   position: absolute;
   cursor: pointer;
   top: 15px;
+  padding: 10px;
+  right: 5%;
+  z-index: 1;
 }
 
 .menuBtn span,
@@ -369,10 +393,11 @@ summary {
   bottom: 4px;
 }
 
-.menuToggle {
+#menuToggle {
   opacity: 0;
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
+  position: absolute;
 }
 
 #menuToggle:checked ~ .menuBtn span {
@@ -397,7 +422,7 @@ summary {
   left: -100%;
   width: 95%;
   height: 100%;
-  background: #44e2a5;
+  background: rgba(0, 0, 0, 0.507);
   visibility: hidden;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
@@ -411,5 +436,12 @@ summary {
 #menuToggle:checked ~ .menuBox {
   visibility: visible;
   left: 0;
+}
+
+@media screen and (min-width: 644px) {
+  .labelMenu,
+  #menuToggle {
+    display: none;
+  }
 }
 /*# sourceMappingURL=main.css.map */

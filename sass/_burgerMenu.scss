@@ -1,12 +1,17 @@
 // Создание кнопки гамбургер меню
 .menuBtn {
-  display: block;
-  background: red;
-  width: 50px;
-  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $specialLime;
+  // width: 50px;
+  // height: 50px;
   position: absolute;
   cursor: pointer;
   top: 15px;
+  padding: 10px;
+  right: 5%;
+  z-index: 1;
 }
 .menuBtn span,
 .menuBtn span::after,
@@ -30,10 +35,10 @@
 .menuBtn span::after {
   bottom: 4px;
 }
-.menuToggle {
-    opacity: 0;
-    transition: all 1s ease;
-
+#menuToggle {
+  opacity: 0;
+  transition: all 1s ease;
+  position: absolute;
 }
 // Изменяем положение палочек-меню при нажатии на CheckBox
 #menuToggle:checked ~ .menuBtn span {
@@ -54,7 +59,7 @@
   left: -100%;
   width: 95%;
   height: 100%;
-  background: rgb(68, 226, 165);
+  background: $specialGrey;
   visibility: hidden;
   transition: all 0.5s ease;
 }
@@ -66,4 +71,10 @@
 #menuToggle:checked ~ .menuBox {
   visibility: visible;
   left: 0;
+}
+@media screen and (min-width: 644px) {
+  .labelMenu,
+  #menuToggle {
+    display: none;
+  }
 }
