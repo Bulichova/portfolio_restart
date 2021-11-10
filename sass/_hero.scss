@@ -1,0 +1,73 @@
+.hero {
+  padding-top: 100px;
+}
+.heroTitle {
+  font-weight: bold;
+  font-family: 'Gilroy-Bold ☞';
+  margin-bottom: 30px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0;
+    line-height: 1.5;
+  }
+}
+.heroDescription {
+  color: gray;
+  line-height: 1.5;
+}
+.langBtnWrapper {
+  display: flex;
+  transform: rotate(270deg);
+  position: absolute;
+  top: 50%;
+  right: 0;
+  @media screen and (min-width: 768px) {
+    position: static;
+  }
+}
+
+.langBtnWrapper button {
+  background: transparent;
+  border: none;
+  color: gray;
+  font-family: 'Gilroy-Bold ☞';
+  &:hover,
+  &:focus {
+    color: black;
+  }
+}
+.langBtnWrapper button:not(:last-child) {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+.langBtnWrapper button:not(:last-child)::after {
+  content: '';
+  display: block;
+  width: 2px;
+  height: 100%;
+  background: grey;
+  margin-left: 10px;
+}
+.contentWrapper {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  position: relative;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  @media screen and (min-width: 768px) {
+    flex-flow: row;
+    // align-items: flex-end;
+    justify-content: space-between;
+  }
+}
+.imageWrapper {
+  width: 100%;
+  & img {
+    object-fit: contain;
+    width: 100%;
+    display: block;
+  }
+}
