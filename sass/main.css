@@ -298,17 +298,23 @@ summary {
   width: 320px;
   margin: 0 auto;
   border: 1px solid;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 @media screen and (min-width: 768px) {
   .container {
     width: 768px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .container {
     width: 1200px;
+    padding-left: 50px;
+    padding-right: 50px;
   }
 }
 
@@ -472,7 +478,7 @@ summary {
   font-family: 'Gilroy-Bold ☞';
   margin-bottom: 30px;
   letter-spacing: 0.08em;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 @media screen and (min-width: 768px) {
@@ -571,5 +577,50 @@ summary {
      object-fit: contain;
   width: 100%;
   display: block;
+}
+
+.about {
+  background: #f6f6f6;
+  padding: 120px 0;
+}
+
+.about .container {
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .about .container {
+    padding-left: 140px;
+    padding-right: 140px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .about .container {
+    padding-left: 360px;
+    padding-right: 360px;
+  }
+}
+
+.aboutList {
+  margin-top: 50px;
+}
+
+.aboutList > li:not(:last-child) {
+  margin-bottom: 70px;
+}
+
+.title {
+  font-size: 34px;
+  line-height: 1.24;
+}
+
+.title::first-letter {
+  text-transform: uppercase;
+}
+
+.aboutList > li {
+  font-size: 18px;
+  line-height: 1.21;
 }
 /*# sourceMappingURL=main.css.map */

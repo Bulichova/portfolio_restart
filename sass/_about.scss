@@ -1,0 +1,33 @@
+.about {
+  background: #f6f6f6;
+
+  padding: 120px 0;
+}
+.about .container {
+  text-align: center;
+  @media screen and (min-width: 768px) {
+    padding-left: 140px;
+    padding-right: 140px;
+  }
+  @media screen and (min-width: 1200px) {
+    padding-left: 360px;
+    padding-right: 360px;
+  }
+}
+.aboutList {
+  margin-top: 50px;
+}
+.aboutList > li:not(:last-child) {
+  margin-bottom: 70px;
+}
+.title {
+  font-size: 34px;
+  line-height: 1.24;
+}
+.title::first-letter {
+  text-transform: uppercase;
+}
+.aboutList > li {
+  font-size: 18px;
+  line-height: 1.21;
+}
