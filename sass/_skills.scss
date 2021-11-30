@@ -1,0 +1,9 @@
+.skillsList > li:not(:last-child) {
+  margin-right: 90px;
+}
+.skillsList {
+  justify-content: center;
+}
+.skillsList p {
+  text-transform: capitalize;
+}
