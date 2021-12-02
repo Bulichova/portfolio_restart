@@ -1,9 +1,44 @@
+.skiils {
+  padding: 100px 0;
+}
+.titleSkills {
+  text-align: center;
+}
 .skillsList > li:not(:last-child) {
   margin-right: 90px;
 }
 .skillsList {
   justify-content: center;
+  margin-top: 84px;
+  display: flex;
 }
 .skillsList p {
   text-transform: capitalize;
+}
+.textSkills {
+  text-align: center;
+  line-height: 1.21;
+  font-size: 18px;
+  margin-top: 70px;
+}
+.skillsItem {
+  display: flex;
+  flex-flow: column;
+  width: 166px;
+  align-items: center;
+}
+.itemImg {
+  background: yellow;
+}
+.textImg {
+  padding-top: 24px;
+  padding-bottom: 40px;
+  text-align: center;
+  text-transform: capitalize;
+}
+.itemStar {
+  stroke: rgb(12, 12, 12);
+  fill: rgb(12, 12, 12);
+  width: 24px;
+  height: 24px;
 }
